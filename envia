@@ -1,0 +1,180 @@
+<?
+header("Content-type: text/html; charset=UTF-8");
+setlocale(LC_ALL, "pt_BR", "pt_BR.utf-8", "pt_BR.utf-8", "portuguese");
+date_default_timezone_set("America/Sao_Paulo");
+/*ini_set( 'error_reporting', E_ALL ^ E_NOTICE );
+ini_set( 'display_errors', '0' );*/
+
+$today = utf8_encode(ucfirst(strftime("%A, %d de %B de %Y", strtotime("today"))));
+$datee = date("Y");
+
+	$date = date("d/m/Y H:i:s");
+	$date2 = date("Y-m-d");
+	$nome = nl2br($_POST['nome']);
+	$end = $_POST['end'];
+	$no = $_POST['no'];
+	$comp = $_POST['comp'];
+	$cep = $_POST['cep'];
+	$cidade = nl2br($_POST['cidade']);
+	$estado = $_POST['estado'];
+	$bairro = $_POST['bairro'];
+	$civil = $_POST['civil'];
+	
+if (in_array($_POST['nascto'], array('1969-12-31', ''))){$nascto="";} else {$nascto= date ("d/m/Y", strtotime ($_POST['nascto']));};
+if (in_array($_POST['dvencto'], array('1969-12-31', ''))){$dvencto="";} else {$dvencto= date ("d/m/Y", strtotime ($_POST['dvencto']));};
+if (in_array($_POST['dconcl1'], array('1969-12-31', ''))){$dconcl1="";} else {$dconcl1= date ("d/m/Y", strtotime ($_POST['dconcl1']));};
+if (in_array($_POST['dconcl2'], array('1969-12-31', ''))){$dconcl2="";} else {$dconcl2= date ("d/m/Y", strtotime ($_POST['dconcl2']));};
+if (in_array($_POST['dconcl3'], array('1969-12-31', ''))){$dconcl3="";} else {$dconcl3= date ("d/m/Y", strtotime ($_POST['dconcl3']));};
+if (in_array($_POST['dconcl4'], array('1969-12-31', ''))){$dconcl4="";} else {$dconcl4= date ("d/m/Y", strtotime ($_POST['dconcl4']));};
+if (in_array($_POST['pa1'], array('1969-12-31', ''))){$pa1="";} else {$pa1= date ("d/m/Y", strtotime ($_POST['pa1']));};
+if (in_array($_POST['pa12'], array('1969-12-31', ''))){$pa12="";} else {$pa12= date ("d/m/Y", strtotime ($_POST['pa12']));};
+if (in_array($_POST['pa2'], array('1969-12-31', ''))){$pa2="";} else {$pa2= date ("d/m/Y", strtotime ($_POST['pa2']));};
+if (in_array($_POST['pa22'], array('1969-12-31', ''))){$pa22="";} else {$pa22= date ("d/m/Y", strtotime ($_POST['pa22']));};
+
+	$cpf = $_POST['cpf'];
+	$rg = $_POST['rg'];	
+	$fone = $_POST['fone'];
+	$cel = $_POST['cel'];
+	$recado = $_POST['recado'];	
+	$email = $_POST['email'];
+	$sexo = $_POST['sexo'];
+	$idade = $_POST['idade'];
+	$deficiente = $_POST['deficiente'];
+	$dependentes = $_POST['dependentes'];
+	$tdeficiencia = $_POST['tdeficiencia'];
+	$regiao = $_POST['regiao'];		
+	$emaildestino = $_POST['regiao'];
+	$Facebook = $_POST["Facebook"];
+	$Google = $_POST["Google"];
+	$Cartazes = $_POST["Cartazes"];
+	$TV = $_POST["TV"];
+	$Jornal = $_POST["Jornal"];
+	$Revista = $_POST["Revista"];
+	$Indicacao = $_POST["Indicacao"];
+	$area1 = $_POST["area1"];
+	$area2 = $_POST["area2"];
+	$area3 = $_POST["area3"];
+	$area4 = $_POST["area4"];
+	$area5 = $_POST["area5"];
+	$area6 = $_POST["area6"];
+	$area7 = $_POST["area7"];
+	$area8 = $_POST["area8"];
+	$area8 = $_POST["area8"];
+	$vpatricurso = $_POST["vpatricurso"];
+	if ($_POST['area1'] == ""){$area_1 = "";}else{$area_1 = "$area1, ";};
+	if ($_POST['area2'] == ""){$area_2 = "";}else{$area_2 = "$area2, ";};
+	if ($_POST['area3'] == ""){$area_3 = "";}else{$area_3 = "$area3, ";};
+	if ($_POST['area4'] == ""){$area_4 = "";}else{$area_4 = "$area4 $vpatricurso $dvencto, ";};
+	if ($_POST['area5'] == ""){$area_5 = "";}else{$area_5 = "$area5, ";};
+	if ($_POST['area6'] == ""){$area_6 = "";}else{$area_6 = "$area6, ";};
+	if ($_POST['area7'] == ""){$area_7 = "";}else{$area_7 = "$area7, ";};
+	if ($_POST['area8'] == ""){$area_8 = "";}else{$area_8 = "$area8.";};
+	$horario1 = $_POST['horario1'];
+	$horario2 = $_POST['horario2'];
+	$horario3 = $_POST['horario3'];
+	$anexcurric = $_POST['anexcurric'];
+	$anexcurric2 = $_POST['anexcurric2'];
+	$instrucao = $_POST['instrucao'];
+	$serie1 = $_POST['serie1'];
+	$nest1 = nl2br($_POST['nest1']);
+	$ncurso1 = nl2br($_POST['ncurso1']);
+	$ensipos = $_POST['ensipos'];
+	$serie2 = $_POST['serie2'];
+	$ncurso2 = nl2br($_POST['ncurso2']);
+	$nest2 = nl2br($_POST['nest2']);
+	$ncurso3 = nl2br($_POST['ncurso3']);
+	$nest3 = nl2br($_POST['nest3']);
+	$ncurso4 = nl2br($_POST['ncurso4']);
+	$nest4 = nl2br($_POST['nest4']);
+	$word = $_POST['word'];
+	$excel = $_POST['excel'];
+	$powerpoint = $_POST['powerpoint'];
+	$outlook = $_POST['outlook'];
+	$info = nl2br($_POST['info']);
+	$emp1 = nl2br($_POST['emp1']);
+	$cargo1 = nl2br($_POST['cargo1']);
+	$empat = $_POST['empat'];
+	$emp2 = nl2br($_POST['emp2']);
+	$cargo2 = nl2br($_POST['cargo2']);
+	$empat2 = $_POST['empat2'];
+	$mensagem = nl2br($_POST['mensagem']);
+
+switch ($emaildestino) {
+	case "Araraquara":    $destinatario1 = "ana.daniel@spsp.com.br";          $destinatario2="araraquara@spsp.com.br"; break;
+	case "Bauru":         $destinatario1 = "mariana.bertoni@spsp.com.br";     $destinatario2="bauru@spsp.com.br";break;
+	case "Garca":         $destinatario1 = "priscila.basseto@spsp.com.br";    $destinatario2="rh@spsp.com.br";break;
+	case "Jundiai":       $destinatario1 = "francinete.medeiros@spsp.com.br"; $destinatario2="jundiai@spsp.com.br";break; 
+	case "Limeira":       $destinatario1 = "isabela.amaral@spsp.com.br";      $destinatario2="limeira@spsp.com.br";break; 
+	case "Marilia":       $destinatario1 = "priscila.basseto@spsp.com.br";    $destinatario2="rh@spsp.com.br";break;
+	case "Pompeia":       $destinatario1 = "priscila.basseto@spsp.com.br";    $destinatario2="rh@spsp.com.br";break;
+	case "S J Rio Pardo": $destinatario1 = "katrini.risso@spsp.com.br";       $destinatario2="riopardo@spsp.com.br";break;
+	case "S J Rio Preto": $destinatario1 = "bruna.gomite@spsp.com.br";      $destinatario2="riopreto@spsp.com.br";break; }
+
+require("phpmailer/class.phpmailer.php");
+
+$mail = new PHPMailer();
+
+$mail->IsSMTP(); // Define que a mensagem será SMTP
+$mail->Host = "smtp.spsp.com.br"; // Endereço do servidor SMTP
+$mail->SMTPAuth = true; // Autenticação
+$mail->Username = 'noreply@spsp.com.br'; // Usuário do servidor SMTP
+$mail->Password = '7m8p*s7s7'; // Senha da caixa postal utilizada
+$mail->From = "noreply@spsp.com.br"; 
+$mail->FromName = "$nome - $cidade";
+$mail->AddAddress($destinatario1,'SPSP');
+$mail->AddAddress($destinatario2,'SPSP '.$regiao);
+/*$mail->AddBCC('gustavo.guedes@spsp.com.br','Gustavo Guedes');*/
+$mail->IsHTML(true); // Define que o e-mail será enviado como HTML
+$mail->CharSet = 'UTF-8'; // Charset da mensagem (opcional)
+$mail->Subject  = "SPSP - Cadastro de Currículo"; // Assunto da mensagem
+$mail->Body = '<table border="0" cellpadding="0" cellspacing="0" width="100%" style=" border: 0; font-family: Helvetica, Verdana, sans-serif;" bgcolor="#f1f2f7"><tr><td height="30"></td></tr><tr bgcolor="#f1f2f7" style="background-color: #f1f2f7"><td align="center" bgcolor="#f1f2f7" style="background-color: #f1f2f7" valign="top" width="100%"><table align="center" border="0" cellpadding="0" cellspacing="0" width="700" style=" border: 0;"><tr bgcolor="#d9534f" style="background-color: #d9534f"><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="660" style=" border: 0;"><tr><td><table align="left" border="0" cellpadding="0" cellspacing="0" style=" border: 0;"><tr><td style="color: #fefefe; font-size: 11px; font-family: Helvetica, Verdana, sans-serif; padding: 15px 0;"> '. $today .' </td></tr></table><table align="right" border="0" cellpadding="0" cellspacing="0" style=" border: 0;"><tr><td style="color: #fefefe; font-size: 11px; font-family: Helvetica, Verdana, sans-serif; padding: 15px 0;"><a href="http://www.spsp.com.br" style="color: #fefefe; text-decoration: none;">spsp.com.br</a></td></tr></table></td></tr></table></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" width="700" bgcolor="#ffffff" style="background-color: #ffffff;"><tr><td height="40"></td></tr><tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="660"><tr><td><table align="center" border="0" cellpadding="0" cellspacing="0"><tr><td align="center"><a href="http://www.spsp.com.br/" style="display: block; text-decoration: none;"><img src="http://200.183.153.86/assets/img/sp-logo.png" alt="SPSP" width="130"></a></td></tr></table></td></tr></table></td></tr><tr><td height="40"></td></tr><tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="628" style="color: #666; font-size: 12px; font-family: Helvetica, Verdana, sans-serif;"><tr><td colspan="4" align="center" style="color: #d9534f; font-size: 16px;"><center> Cadastro de Currículo - SPSP </center></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><b>Dados pessoais:</b></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td width="25%">Nome:</td><td colspan="3"><strong> '. $nome .'</strong></td></tr><tr><td>Endereço:</td><td colspan="3"><strong> '. $end .' , '. $no .' - '. $bairro .' - '. $comp .'</strong></td></tr><tr><td><p>CEP:</p></td><td width="25%"><strong> '. $cep .'</strong></td><td width="25%"><p>Cidade:</p></td><td width="25%"><strong> '. $cidade .' / '. $estado .'</strong></td></tr><tr><td>Data nascimento:</td><td><strong> '. $nascto .'</strong></td><td>Idade:</td><td><strong> '. $idade .'</strong></td></tr><tr><td>Estado civil: </td><td><strong> '. $civil .'</strong></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Sexo:</td><td><strong> '. $sexo .'</strong></td><td>Dependentes:</td><td><strong> '. $dependentes .'</strong></td></tr><tr><td>CPF:</td><td><strong> '. $cpf .'</strong></td><td>RG:</td><td><strong> '. $rg .'</strong></td></tr><tr><td>Telefone:</td><td><strong> '. $fone .'</strong></td><td>Celular:</td><td><strong> '. $cel .'</strong></td></tr><tr><td>Recado:</td><td><strong> '. $recado .'</strong></td><td>E-mail:</td><td><strong> '. $email .'</strong></td></tr><tr><td><strong> '. $deficiente .'</strong></td><td>&nbsp;</td><td><strong> '. $tdeficiencia .'</strong></td><td>&nbsp;</td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><b>Interesse profissional:</b></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td>Região em que deseja atuar:</td><td colspan="3"><strong> '. $regiao .'</strong></td></tr><tr><td>Áreas de interesse:</td><td colspan="3"><strong> '. $area_1 .' '. $area_2 .' '. $area_3 .' '. $area_4 .' '. $area_5 .' '. $area_6 .' '. $area_7 .' '. $area_8 .'</strong></td></tr><tr><td>Disponibilidade de horário:</td><td colspan="3"><strong> '. $horario1 .' '. $horario2 .' '. $horario3 .'</strong></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><b>Escolaridade:</b></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td>Grau de escolaridade:</td><td colspan="3"><strong> '. $instrucao .' '. $serie1 .' '. $dconcl1 .'</strong></td></tr><tr><td>Curso:</td><td colspan="3"><strong> '. $ncurso1 .'</strong></td></tr><tr><td>Instituição de ensino:</td><td colspan="3"><strong> '. $nest1 .'</strong></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td>Pós graduação:</td><td colspan="3"><strong> '. $ensipos .' '. $serie2 .' '. $dconcl2 .'</strong></td></tr><tr><td>Curso:</td><td colspan="3"><strong> '. $ncurso2 .'</strong></td></tr><tr><td>Instituição de ensino:</td><td colspan="3"><strong> '. $nest2 .'</strong></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><b>Cursos Complementares:</b></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td>Curso: </td><td colspan="3"><strong> '. $ncurso3 .'</strong></td></tr><tr><td>Instituição de ensino:</td><td colspan="3"><strong> '. $nest3 .'</strong></td></tr><tr><td>Concluído em:</td><td colspan="3"><strong> '. $dconcl3 .'</strong></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td>Curso:</td><td colspan="3"><strong> '. $ncurso4 .'</strong></td></tr><tr><td>Instituição de ensino:</td><td colspan="3"><strong> '. $nest4 .'</strong></td></tr><tr><td>Concluído em:</td><td colspan="3"><strong> '. $dconcl4 .'</strong></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><b>Informática:</b></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td>Word:</td><td><strong> '. $word .'</strong></td><td>Excel:</td><td><strong> '. $excel .'</strong></td></tr><tr><td>Powerpoint:</td><td><strong> '. $powerpoint .'</strong></td><td>Outlook:</td><td><strong> '. $outlook .'</strong></td></tr><tr><td>Outros:</td><td colspan="3"><strong> '. $info .'</strong></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><b>Experiências Profissionais:</b></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td colspan="2">Última empresa que trabalhou:</td><td colspan="2"><strong> '. $emp1 .' '. $empat .'</strong></td></tr><tr><td>Cargo ocupado:</td><td colspan="3"><strong> '. $cargo1 .'</strong></td></tr><tr><td>Período:</td><td colspan="3"><strong>de '. $pa1 .' a '. $pa12 .'</strong></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td colspan="2">Penúltima empresa que trabalhou:</td><td colspan="2"><strong> '. $emp2 .' '. $empat2 .'</strong></td></tr><tr><td>Cargo ocupado:</td><td colspan="3"><strong> '. $cargo2 .' </strong></td></tr><tr><td>Período:</td><td colspan="3"><strong>de '. $pa2 .' a '. $pa22 .'</strong></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><b>Informações complementares:</b></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td>Mensagem:</td><td colspan="3"><strong> '. $mensagem .'</strong></td></tr><tr><td colspan="4">&nbsp;</td></tr><tr><td colspan="2">O candidato conheceu o site através de:</td><td colspan="2"><strong> '. $Facebook .' - '. $Google .' - '. $Cartazes .' - '. $TV .' - '. $Jornal .' - '. $Revista .' - '. $Indicacao .'</strong></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4"><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td colspan="4" height="25"></td></tr><tr><td colspan="4" style="color: #aaaaaa; font-size: 12px; font-family: Helvetica, Arial, sans-serif;"> Este e-mail tem apenas caráter informativo, favor não responder. </td></tr><tr><td colspan="4" style="color: #aaaaaa; font-size: 12px; font-family: Helvetica, Arial, sans-serif;"> Preserve o meio ambiente, economize papel. Não é necessário imprimir este e-mail. </td></tr></table></td></tr><tr><td height="35"></td></tr><tr bgcolor="#f1f2f7"><td align="center" bgcolor="#f1f2f7" valign="top" width="100%"><table align="center" border="0" cellpadding="0" cellspacing="0" width="700" style=" border: 0;"><tr bgcolor="#d9534f"><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="660" style=" border: 0;"><tr><td><table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style=" border: 0;"><tr><td align="left" style="color: #fefefe; font-size: 11px; font-family: Helvetica, Verdana, sans-serif; padding: 15px 0;"> Cadastro de Currículo</td><td align="right" style="color: #fefefe; font-size: 11px; font-family: Helvetica, Verdana, sans-serif; padding: 15px 0;"> SPSP &copy; '. $datee .' . Todos os direitos reservados. </td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td height="30"></td></tr></table>';
+$mail->AltBody = 'ERRO';
+$mail->AddAttachment($_FILES['curriculo']['tmp_name'], $_FILES['curriculo']['name']);      // attachment
+
+$enviado = $mail->Send();
+
+$mail->ClearAllRecipients();
+$mail->ClearAttachments();
+
+if ($enviado) {
+echo ("<SCRIPT LANGUAGE='JavaScript'>
+	window.alert('Currículo cadastrado com sucesso!');</SCRIPT>");
+	
+$conexao = mysql_connect("mysql01.spsp1.hospedagemdesites.ws", "spsp1", "S7s7master*10*") or die ("Erro na conexão ao banco de dados.");
+$db = mysql_select_db("spsp1") or die ("Erro ao selecionar a base de dados.");
+$query = "INSERT INTO curric(date, nome, end, no, comp, cep, cidade, estado, bairro, civil, nascto, cpf, rg, fone, cel, recado, email, sexo, idade, dependentes, regiao, emaildestino, area1, area2, area3, area4, vpatricurso, dvencto, area5, area6, area7, area8, horario1, horario2, horario3, anexcurric, instrucao, serie1, nest1, dconcl1, ncurso1, ensipos, serie2, ncurso2, nest2, dconcl2, ncurso3, nest3, dconcl3, ncurso4, nest4, dconcl4, word, excel, powerpoint, outlook, info, emp1, cargo1, pa1, pa12, empat, emp2, cargo2, pa2, pa22, empat2, mensagem, Facebook, Google, Cartazes, TV, Jornal, Revista, Indicacao, deficiente, tdeficiencia) VALUES('$date2', '$_POST[nome]', '$_POST[end]', '$_POST[no]', '$_POST[comp]', '$_POST[cep]', '$_POST[cidade]', '$_POST[estado]', '$_POST[bairro]', '$_POST[civil]', '$_POST[nascto]', '$_POST[cpf]', '$_POST[rg]', '$_POST[fone]', '$_POST[cel]', '$_POST[recado]', '$_POST[email]', '$_POST[sexo]', '$_POST[idade]', '$_POST[dependentes]', '$_POST[regiao]', '$_POST[emaildestino]', '$_POST[area1]', '$_POST[area2]', '$_POST[area3]', '$_POST[area4]', '$_POST[vpatricurso]', '$_POST[dvencto]', '$_POST[area5]', '$_POST[area6]', '$_POST[area7]', '$_POST[area8]', '$_POST[horario1]', '$_POST[horario2]', '$_POST[horario3]', '$_POST[anexcurric2]', '$_POST[instrucao]', '$_POST[serie1]', '$_POST[nest1]', '$_POST[dconcl1]', '$_POST[ncurso1]', '$_POST[ensipos]', '$_POST[serie2]', '$_POST[ncurso2]', '$_POST[nest2]', '$_POST[dconcl2]', '$_POST[ncurso3]', '$_POST[nest3]', '$_POST[dconcl3]', '$_POST[ncurso4]', '$_POST[nest4]', '$_POST[dconcl4]', '$_POST[word]', '$_POST[excel]', '$_POST[powerpoint]', '$_POST[outlook]', '$_POST[info]', '$_POST[emp1]', '$_POST[cargo1]', '$_POST[pa1]', '$_POST[pa12]', '$_POST[empat]', '$_POST[emp2]', '$_POST[cargo2]', '$_POST[pa2]', '$_POST[pa22]', '$_POST[empat2]', '$_POST[mensagem]', '$_POST[Facebook]', '$_POST[Google]', '$_POST[Cartazes]', '$_POST[TV]', '$_POST[Jornal]', '$_POST[Revista]', '$_POST[Indicacao]', '$_POST[deficiente]', '$_POST[tdeficiencia]')";
+mysql_query($query);
+
+$mail = new PHPMailer();
+
+$mail->IsSMTP(); // Define que a mensagem será SMTP
+$mail->Host = "smtp.spsp.com.br"; // Endereço do servidor SMTP
+$mail->SMTPAuth = true; // Autenticação
+$mail->Username = 'noreply@spsp.com.br'; // Usuário do servidor SMTP
+$mail->Password = '7m8p*s7s7'; // Senha da caixa postal utilizada
+$mail->From = "rh@spsp.com.br"; 
+$mail->FromName = "RH - Grupo SPSP";
+$mail->AddAddress($email,$name);
+$mail->IsHTML(true); // Define que o e-mail será enviado como HTML
+$mail->CharSet = 'UTF-8'; // Charset da mensagem (opcional)
+$mail->Subject  = "SPSP - Trabalhe Conosco"; // Assunto da mensagem
+$mail->Body = '<table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 14px; border: 0;" bgcolor="#f1f2f7"><tr><td height="30"></td></tr><tr bgcolor="#f1f2f7" style="background-color: #f1f2f7"><td align="center" bgcolor="#f1f2f7" style="background-color: #f1f2f7" valign="top" width="100%"><table align="center" border="0" cellpadding="0" cellspacing="0" width="700" style="font-size: 14px; border: 0;"><tr bgcolor="#d9534f" style="background-color: #d9534f"><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="660" style="font-size: 14px; border: 0;"><tr><td><table align="left" border="0" cellpadding="0" cellspacing="0" style="font-size: 14px; border: 0;"><tr><td style="color: #fefefe; font-size: 11px; font-family: Helvetica, Verdana, sans-serif; padding: 15px 0;"> '. $today .' </td></tr></table><table align="right" border="0" cellpadding="0" cellspacing="0" style="font-size: 14px; border: 0;"><tr><td style="color: #fefefe; font-size: 11px; font-family: Helvetica, Verdana, sans-serif; padding: 15px 0;"><a href="http://www.spsp.com.br" style="color: #fefefe; text-decoration: none;">spsp.com.br</a></td></tr></table></td></tr></table></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" width="700" bgcolor="#ffffff" style="background-color: #ffffff;"><tr><td height="40"></td></tr><tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="660"><tr><td><table align="center" border="0" cellpadding="0" cellspacing="0"><tr><td align="center"><a href="http://www.spsp.com.br/" style="display: block; text-decoration: none;"><img src="http://200.183.153.86/assets/img/sp-logo.png" alt="SPSP" width="130"></a></td></tr></table></td></tr></table></td></tr><tr><td height="40"></td></tr><tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="628" style="color: #666666; font-size: 12px; font-family: Helvetica, Verdana, sans-serif;"><tr><td align="center" style="color: #d9534f; font-size: 16px; font-family: Helvetica, Verdana, sans-serif;">Trabalhe Conosco - SPSP</td></tr><tr><td height="20"></td></tr><tr><td> Olá </td></tr><tr><td height="20"></td></tr><tr><td>Obrigado por se interessar em trabalhar conosco!</td></tr><tr><td>Suas informacoes foram enviadas para o Recursos Humanos.</td></tr><tr><td>Entraremos em contato para processo seletivo assim que houver uma vaga com o seu perfil.</td></tr><tr><td>&nbsp;</td></tr><tr><td>Atenciosamente,</td></tr><tr><td><strong> '. $nome_do_site .' </strong></td></tr><tr><td height="30"></td></tr><tr><td><hr style="height: 1px; border-style: none; background-color: #cccccc;"></td></tr><tr><td height="25"></td></tr><tr><td style="color: #aaaaaa; font-size: 12px; font-family: Helvetica, Arial, sans-serif;"> Este e-mail tem apenas caráter informativo, favor não responder. </td></tr><tr><td style="color: #aaaaaa; font-size: 12px; font-family: Helvetica, Arial, sans-serif;"> Preserve o meio ambiente, economize papel. Não é necessário imprimir este e-mail. </td></tr></table></td></tr><tr><td height="35"></td></tr><tr bgcolor="#f1f2f7"><td align="center" bgcolor="#f1f2f7" valign="top" width="100%"><table align="center" border="0" cellpadding="0" cellspacing="0" width="700" style="font-size: 14px; border: 0;"><tr bgcolor="#d9534f"><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="660" style="font-size: 14px; border: 0;"><tr><td><table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="font-size: 14px; border: 0;"><tr><td align="left" style="color: #fefefe; font-size: 11px; font-family: Helvetica, Verdana, sans-serif; padding: 15px 0;"> Trabalhe Conosco </td><td align="right" style="color: #fefefe; font-size: 11px; font-family: Helvetica, Verdana, sans-serif; padding: 15px 0;"> SPSP &copy; '. $datee .' . Todos os direitos reservados. </td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td height="30"></td></tr></table>';
+$mail->AltBody = 'ERRO';
+
+$enviado = $mail->Send();
+
+$mail->ClearAllRecipients();
+$mail->ClearAttachments();
+
+} else {
+echo ("<SCRIPT LANGUAGE='JavaScript'>
+	window.alert('Não foi possível cadastrar seu cirrículo.');</SCRIPT>");
+ 
+echo "Informações do erro: " . $mail->ErrorInfo;
+}
+
+?>
+
+<SCRIPT LANGUAGE='JavaScript'>
+window.location.href='index.php';
+</SCRIPT>

@@ -1,0 +1,1009 @@
+<?php
+header("Content-Type: text/html; charset=UTF-8",true) ;
+setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set("America/Sao_Paulo");
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="assets/images/SPSP-favicon.png">
+<title>Grupo SPSP - Trabalhe Conosco</title>
+<meta name="description" content="SPSP - Terceirização de Portaria, Limpeza, Vigilância Patrimonial, Divisão Tecnológica e Hospitalar com qualidade, segurança e seriedade."/>
+<meta name="copyright" content="SPSP"/>
+<meta name="author" content="SPSP"/>
+<meta name="email" content="spsp@spsp.com.br"/>
+<meta name="Charset" content="UTF-8"/>
+<meta name="Distribution" content="Global"/>
+<meta name="Rating" content="General"/>
+<meta name="Robots" content="INDEX,FOLLOW"/>
+<meta name="Revisit-after" content="31 Days"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body class="normal-header">
+<div id="masthead" class="navbar navbar-static-top swatch-white navbar-sticky" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar"> </button>
+      <a href="index.php" class="navbar-brand"> <img src="assets/images/SPSP-logo-top.png" alt="SPSP - Grupo Empresarial de Serviços"> </a> </div>
+    <nav class="collapse navbar-collapse main-navbar" role="navigation">
+      <ul id="menu-one-page" class="nav navbar-nav navbar-right">
+        <li class="nav-highlight"><a href="#" data-toggle="modal" data-target="#myModal" class="vai-virar-azul">Mural de Vagas</a> </li>
+        <li><a> | </a></li>
+        <li class="nav-highlight"><a href="index.php">Retornar ao site</a> </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div id="content">
+  <article>
+    <section id="two" class="section swatch-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <header class="text-center element-normal-top element-medium-bottom not-condensed os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+              <h1 class="super hairline bordered bordered-normal"> Trabalhe Conosco </h1>
+            </header>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-md-12 text-left" data-os-animation="fadeInLeft" data-os-animation-delay="0.3s">
+            <form enctype="multipart/form-data" action="envia.php" method="post" name="form1" id="form1" >
+              
+              <div class="col-md-6 text-left small-screen-center os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.3s">
+                <h2 class="inner-caps ">Dados Pessoais</h2>
+              <br><div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group form-icon-group">
+                      <input class="formform-control" id="nome" name="nome" placeholder="Nome" type="text" size="60" required/>
+                      <i class="fa fa-user"></i> </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-9">
+                    <div class="form-group form-icon-group">
+                      <input name="end" type="text" class="form-control" placeholder="Endereço" id="end" size="50" required/>
+                      <i class="fa fa-envelope"></i></div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group form-icon-group">
+                      <input name="no" type="text" class="form-control" placeholder="N°" id="no" size="5" required/>
+                      <i class="fa fa-home"></i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="cep" name="cep" maxlength="10" size="15" class="form-control" placeholder="CEP" onkeypress="return SomenteNumero(event)" required/>
+                      <i class="fa fa-home"></i></div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Cidade" size="30" required/>
+                      <i class="fa fa-envelope"></i></div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group form-icon-group"> <i class="fa fa-envelope"></i>
+                      <input class="form-control" placeholder="Estado" readonly>
+                      <div style=" width: 75%;">
+                        <select name="estado" class="form-control" id="estado" style="padding-top: 0;" required>
+                          <option selected value="">Selecione...</option>
+                          <option value="AC">AC</option>
+                          <option value="AL">AL</option>
+                          <option value="AM">AM</option>
+                          <option value="AP">AP</option>
+                          <option value="BA">BA</option>
+                          <option value="CE">CE</option>
+                          <option value="DF">DF</option>
+                          <option value="ES">ES</option>
+                          <option value="GO">GO</option>
+                          <option value="MA">MA</option>
+                          <option value="MG">MG</option>
+                          <option value="MS">MS</option>
+                          <option value="MT">MT</option>
+                          <option value="PA">PA</option>
+                          <option value="PB">PB</option>
+                          <option value="PE">PE</option>
+                          <option value="PI">PI</option>
+                          <option value="PR">PR</option>
+                          <option value="RJ">RJ</option>
+                          <option value="RN">RN</option>
+                          <option value="RO">RO</option>
+                          <option value="RR">RR</option>
+                          <option value="RS">RS</option>
+                          <option value="SC">SC</option>
+                          <option value="SE">SE</option>
+                          <option value="SP">SP</option>
+                          <option value="TO">TO</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="bairro" name="bairro" class="form-control" placeholder="Bairro" size="25" required/>
+                      <i class="fa fa-home"></i></div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="comp" name="comp" class="form-control" placeholder="Complemento" size="15"/>
+                      <i class="fa fa-home"></i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group"> <i class="fa fa-user"></i>
+                      <input class="form-control" placeholder="Estado Civil" readonly/>
+                      <div style="width: 87%;">
+                        <select name="civil" class="form-control" id="civil" style="padding-top: 0;" required>
+                          <option value="" selected="">Selecione...</option>
+                          <option value="Casado">Casado</option>
+                          <option value="Solteiro">Solteiro</option>
+                          <option value="Divorciado">Divorciado</option>
+                          <option value="Viuvo">Viuvo</option>
+                          <option value="Outro">Outro</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="date" id="nascto" name="nascto" maxlength="10" size="10" class="form-control" placeholder="Dt. Nascto." onkeypress="return SomenteNumero(event)" required/>
+                      <i class="fa fa-calendar"></i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="cpf" name="cpf" maxlength="14" size="15" class="form-control" placeholder="CPF" onkeypress="return SomenteNumero(event)" required/>
+                      <i class="fa fa-keyboard-o"></i></div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="rg" name="rg" maxlength="12" size="15" class="form-control" placeholder="RG" required/>
+                      <i class="fa fa-keyboard-o"></i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="fone" name="fone" class="form-control" placeholder="Telefone"/>
+                      <i class="fa fa-phone"></i></div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="cel" name="cel" class="form-control" placeholder="Celular" required/>
+                      <i class="fa fa-mobile"></i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="text" id="recado" name="recado" class="form-control" placeholder="Tel. Recado"/>
+                      <i class="fa fa-phone"></i></div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input name="email" type="text" placeholder="E-mail" class="form-control" id="email" size="40" required/>
+                      <i class="fa fa-envelope"></i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group"> <i class="fa fa-user"></i>
+                      <input class="form-control" placeholder="Sexo" readonly >
+                      <div class="row">
+                        <div class="btn-group col-md-12 col-sm-12 col-xs-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-6 col-sm-6 col-xs-6" for="sexom">
+                            <input type="radio" name="sexo" value="Masculino" id="sexom" required >
+                            Masculino</label>
+                          <label class="btn btn-primary col-md-6 col-sm-6 col-xs-6" for="sexof">
+                            <input type="radio" name="sexo" value="Feminino" id="sexof" required/>
+                            Feminino</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group form-icon-group">
+                      <input name="idade" type="text" class="form-control" placeholder="Idade" id="idade" size="10" required/>
+                      <i class="fa fa-user"></i></div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group form-icon-group">
+                      <input name="dependentes" type="text" class="form-control" placeholder="Dependentes" id="dependentes" size="15" required/>
+                      <i class="fa fa-users"></i></div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-2 text-center"> <img src="assets/images/tb11.png" width="60" align="center"/> </div>
+                  <div class="col-md-7">
+                    <div class="form-group form-icon-group"> <i class="fa fa-wheelchair"></i>
+                      <input class="form-control" placeholder="Portador de Necessidades Especiais" readonly>
+                      <div class="row">
+                        <div class="btn-group col-md-12 col-sm-12 col-xs-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-6 col-sm-6 col-xs-6" for="deficis" id="lbldeficis" >
+                            <input name="deficiente" type="radio" value="Possui deficiencia " id="deficis" required/>
+                            SIM</label>
+                          <label class="btn btn-primary col-md-6 col-sm-6 col-xs-6" for="deficin" id="lbldeficin" >
+                            <input name="deficiente" type="radio" value="" id="deficin" required/>
+                            NÃO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div id="deficienciadiv" style="display:none">
+                      <div class="form-group form-icon-group"> <i class="fa fa-wheelchair"></i>
+                        <input class="form-control" placeholder="Tipo" readonly>
+                        <div style=" width: 82%;">
+                          <select name="tdeficiencia" class="form-control" id="tdeficiencia" style="padding-top: 0;">
+                            <option selected value="">Selecione...</option>
+                            <option value="Auditiva">Auditiva</option>
+                            <option value="Fisica">Fisica</option>
+                            <option value="Mental">Mental</option>
+                            <option value="Visual">Visual</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 text-left small-screen-center os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.3s">
+                <h2 class="inner-caps ">Interesse Profissional</h2>
+                <br>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group"> <i class="fa fa-map-marker"></i>
+                      <input class="form-control" placeholder="Região em que deseja atuar" readonly/>
+                      <div style=" width: 90%;">
+                        <select name="regiao" class="form-control" id="regiao" style="padding-top: 0;" required>
+                        <option selected="" value="">Selecione...</option>
+                        <option value="Araraquara">Araraquara</option>
+                        <option value="Bauru">Bauru</option>
+                        <option value="Garca">Garça</option>
+                        <option value="Jundiai">Jundiaí</option>
+                        <option value="Limeira">Limeira</option>
+                        <option value="Marilia">Marília</option>
+                        <option value="Pompeia">Pompéia</option>
+                        <option value="S J Rio Pardo">S J Rio Pardo</option>
+                        <option value="S J Rio Preto">S J Rio Preto</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group"> <i class="fa fa-clock-o"></i>
+                      <input class="form-control" placeholder="Disponibilidade de Horário">
+                      <div class="row">
+                        <div class="btn-group col-md-12 col-sm-12 col-xs-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="horario1">
+                            <input class="ckbhora" type="checkbox" name="horario1" value="Manha, " id="horario1">
+                            Manhã</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="horario2">
+                            <input class="ckbhora" type="checkbox" name="horario2" value="Tarde, " id="horario2">
+                            Tarde</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="horario3">
+                            <input class="ckbhora" type="checkbox" name="horario3" value="Noite" id="horario3">
+                            Noite</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-icon-group"> <i class="fa fa-cogs"></i>
+                  <input class="form-control" placeholder="Área de interesse" readonly>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div class="btn-group col-md-6 col-sm-6 col-xs-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-12 col-sm-12 col-xs-12" for="area5">
+                            <input class="ckbarea" type="checkbox" name="area5" value="Administrativo" id="area5">
+                            Administrativo</label>
+                          <label class="btn btn-primary col-md-12 col-sm-12 col-xs-12" for="area8">
+                            <input class="ckbarea" type="checkbox" name="area8" value="Jardinagem" id="area8">
+                            Jardinagem</label>
+                          <label class="btn btn-primary col-md-12 col-sm-12 col-xs-12" for="area1">
+                            <input class="ckbarea" type="checkbox" name="area1" value="Limpeza" id="area1">
+                            Limpeza</label>
+                          <label class="btn btn-primary col-md-12 col-sm-12 col-xs-12" for="area7">
+                            <input class="ckbarea" type="checkbox" name="area7" value="Manutencao" id="area7">
+                            Manutenção</label>
+                          <label class="btn btn-primary col-md-12 col-sm-12 col-xs-12" for="area3">
+                            <input class="ckbarea" type="checkbox" name="area3" value="Portaria" id="area3">
+                            Portaria</label>
+                          <label class="btn btn-primary col-md-12 col-sm-12 col-xs-12" for="area2">
+                            <input class="ckbarea" type="checkbox" name="area2" value="Servicos Gerais" id="area2">
+                            Serviços Gerais</label>
+                          <label class="btn btn-primary col-md-12 col-sm-12 col-xs-12" for="area6">
+                            <input class="ckbarea" type="checkbox" name="area6" value="Zeladoria" id="area6">
+                            Zeladoria</label>
+                          <label class="btn btn-primary col-md-12 col-sm-12 col-xs-12" for="area4" id="lblarea4">
+                            <input class="ckbarea" type="checkbox" name="area4" value="Vigilancia Patrimonial" id="area4" onload="check(0)">
+                            Vigilância</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div id="vpatriinfo" style="display: none;" class="form-group form-icon-group"> <i class="fa fa-keyboard-o"></i>
+                        <input class="form-control" placeholder="Possui curso de Vigilante?" readonly>
+                        <div class="row">
+                          <div class="btn-group col-md-12 col-sm-12 col-xs-12" data-toggle="buttons">
+                            <label class="btn btn-primary col-md-6 col-sm-6 col-xs-6" for="vpatricurso" id="lblvpatricurso">
+                              <input name="vpatricurso" type="radio" value=" - CNV com validade ate: " id="vpatricurso" onload="check(0)"/>
+                              SIM</label>
+                            <label class="btn btn-primary col-md-6 col-sm-6 col-xs-6" for="vpatricurso2" id="lblvpatricurso2">
+                              <input name="vpatricurso" type="radio" value=" - nao possui curso na area" id="vpatricurso2" onclick="limpa()" onload="check(0)"/>
+                              NÃO</label>
+                          </div>
+                        </div>
+                        <div id="datav" style="display: none; clear:both;" class="form-group form-icon-group"> <i class="fa fa-calendar"></i>
+                          <input type="date" id="dvencto" name="dvencto" maxlength="10" size="20" class="form-control" placeholder="Validade da CNV" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="clear:both"><br><br></div>
+              <div class="col-md-6 text-left small-screen-center os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.3s">
+                <h2 class="inner-caps ">Escolaridade</h2>
+                <br>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group"> <i class="fa fa-pencil-square-o"></i>
+                      <input class="form-control" placeholder="Grau de Instrução" readonly>
+                      <div style=" width: 86%;">
+                        <select name="instrucao" class="form-control" id="instrucao" onclick="val6(); valf();" style="padding-top: 0;" required/>
+                        <option selected="" value="">Selecione...</option>
+                        <option value="Analfabeto">Não Possui</option>
+                        <option value="Fundamental Incompleto, estudou até o ano ">Fundamental Incompleto</option>
+                        <option value="Fundamental Completo - concluiu em: ">Fundamental Completo</option>
+                        <option value="Medio Incompleto, estudou até o ano ">Médio Incompleto</option>
+                        <option value="Medio Completo - concluiu em: ">Médio Completo</option>
+                        <option value="Superior Incompleto, estudou até o ano ">Superior Incompleto</option>
+                        <option value="Superior Completo - concluiu em: ">Superior Completo</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div id="dserie1" style="display:none;" class="input-prepend">
+                      <div class="form-group form-icon-group">
+                        <input type="text" id="serie1" name="serie1" class="form-control" placeholder="Estudou até o ano" size="5"/>
+                        <i class="fa fa-pencil-square-o"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div id="concl1" style="display:none;" class="input-prepend">
+                      <div class="form-group form-icon-group">
+                        <input type="date" id="dconcl1" name="dconcl1" class="form-control" placeholder="Data de conclusão" size="10"/>
+                        <i class="fa fa-pencil-square-o"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div id="facu" style="display:none">
+                      <div class="form-group form-icon-group">
+                        <input type="text" id="ncurso1" name="ncurso1" class="form-control" placeholder="Nome do curso" size="45"/>
+                        <i class="fa fa-pencil-square-o"></i></div>
+                      <div class="form-group form-icon-group">
+                        <input type="text" id="nest1" name="nest1" class="form-control" placeholder="Nome da Instituição" size="45"/>
+                        <i class="fa fa-pencil-square-o"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group"> <i class="fa fa-pencil-square-o"></i>
+                      <input class="form-control" placeholder="Pós Graduação" readonly>
+                      <div style=" width: 88%;">
+                        <select name="ensipos" class="form-control" id="ensipos" onclick="val7(); valp();" style="padding-top: 0;" required>
+                          <option selected="" value="">Selecione...</option>
+                          <option value="Nao Possui">Não Possui</option>
+                          <option value="Pos Graduacao Incompleta, estudou até o ano ">Pós Graduação Incompleto</option>
+                          <option value="Pos Graduacao Completa - concluiu em: ">Pós Graduação Completo</option>
+                          <option value="Mestrado Incompleto, estudou até o ano ">Mestrado Incompleto</option>
+                          <option value="Mestrado Completo - concluiu em: ">Mestrado Completo</option>
+                          <option value="Doutorado Incompleto, estudou até o ano ">Doutorado Incompleto</option>
+                          <option value="Doutorado Completo - concluiu em: ">Doutorado Completo</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div id="dserie2" style="display:none;" class="input-prepend">
+                      <div class="form-group form-icon-group">
+                        <input type="text" id="serie2" name="serie2" class="form-control" placeholder="Estudou até o ano" size="5"/>
+                        <i class="fa fa-pencil-square-o"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div id="concl2" style="display:none;" class="input-prepend">
+                      <div class="form-group form-icon-group">
+                        <input type="date" id="dconcl2" name="dconcl2" class="form-control" placeholder="Data de conclusão" size="10"/>
+                        <i class="fa fa-pencil-square-o"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div id="pos" style="display:none">
+                      <div class="form-group form-icon-group">
+                        <input type="text" id="ncurso2" name="ncurso2" class="form-control" placeholder="Nome do curso" size="45"/>
+                        <i class="fa fa-pencil-square-o"></i></div>
+                      <div class="form-group form-icon-group">
+                        <input type="text" id="nest2" name="nest2" class="form-control" placeholder="Nome da Instituição" size="45"/>
+                        <i class="fa fa-pencil-square-o"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <br><br>
+                <h2 class="inner-caps ">Cursos complementares</h2>
+                <br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group form-icon-group">
+                      <input name="ncurso3" type="text" placeholder="Nome do curso" class="form-control" id="ncurso3" size="45"/>
+                      <i class="fa fa-tasks"></i></div>
+                    <div class="form-group form-icon-group">
+                      <input name="nest3" type="text" placeholder="Nome da Instituição" class="form-control" id="nest3" size="45"/>
+                      <i class="fa fa-tasks"></i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="date" id="dconcl3" name="dconcl3" class="form-control" placeholder="Data de conclusão" size="10"/>
+                      <i class="fa fa-tasks"></i></div>
+                    <br>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group form-icon-group">
+                      <input name="ncurso4" type="text" placeholder="Nome do curso" class="form-control" id="ncurso4" size="45"/>
+                      <i class="fa fa-tasks"></i></div>
+                    <div class="form-group form-icon-group">
+                      <input name="nest4" type="text" placeholder="Nome da Instituição" class="form-control" id="nest4" size="45"/>
+                      <i class="fa fa-tasks"></i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input type="date" id="dconcl4" name="dconcl4" class="form-control" placeholder="Data de conclusão" size="10"/>
+                      <i class="fa fa-tasks"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 text-left small-screen-center os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.3s">
+                <h2 class="inner-caps ">Informática</h2>
+                <br>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input class="form-control" placeholder="Word" readonly>
+                      <div class="row">
+                        <div class="btn-group col-md-12 col-sm-12 col-xs-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="basico_word">
+                            <input name="word" id="basico_word" type="radio" value="basico" ondblclick="limparRadios('word');" onload="check(0)"/>
+                            Básico</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="intermediario_word">
+                            <input name="word" id="intermediario_word" type="radio" value="intermediario" ondblclick="limparRadios('word');" onload="check(0)" >
+                            Médio</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="avancado_word">
+                            <input name="word" id="avancado_word" type="radio" value="avancado" ondblclick="limparRadios('word');" onload="check(0)" >
+                            Avançado</label>
+                        </div>
+                      </div>
+                      <i class="fa fa-laptop"></i></div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input class="form-control" placeholder="Excel" readonly>
+                      <div class="row">
+                        <div class="btn-group col-md-12 col-sm-12 col-xs-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="basico_excel">
+                            <input name="excel" id="basico_excel" type="radio" value="basico" ondblclick="limparRadios('excel');" >
+                            Básico</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="intermediario_excel">
+                            <input name="excel" id="intermediario_excel" type="radio" value="intermediario" ondblclick="limparRadios('excel');" >
+                            Médio</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="avancado_excel">
+                            <input name="excel" id="avancado_excel" type="radio" value="avancado" ondblclick="limparRadios('excel');" >
+                            Avançado</label>
+                        </div>
+                      </div>
+                      <i class="fa fa-laptop"></i></div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input class="form-control" placeholder="Powerpoint" readonly>
+                      <div class="row">
+                        <div class="btn-group col-md-12 col-sm-12 col-xs-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="basico_powerpoint">
+                            <input name="powerpoint" id="basico_powerpoint" type="radio" value="basico" ondblclick="limparRadios('powerpoint');" >
+                            Básico</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="intermediario_powerpoint">
+                            <input name="powerpoint" id="intermediario_powerpoint" type="radio" value="intermediario" ondblclick="limparRadios('powerpoint');" >
+                            Médio</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="avancado_powerpoint">
+                            <input name="powerpoint" id="avancado_powerpoint" type="radio" value="avancado" ondblclick="limparRadios('powerpoint');" >
+                            Avançado</label>
+                        </div>
+                      </div>
+                      <i class="fa fa-laptop"></i></div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-icon-group">
+                      <input class="form-control" placeholder="Outlook" readonly>
+                      <div class="row">
+                        <div class="btn-group col-md-12 col-sm-12 col-xs-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="basico_outlook">
+                            <input name="outlook" id="basico_outlook" type="radio" value="basico" ondblclick="limparRadios('outlook');" >
+                            Básico</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="intermediario_outlook">
+                            <input name="outlook" id="intermediario_outlook" type="radio" value="intermediario" ondblclick="limparRadios('outlook');" >
+                            Médio</label>
+                          <label class="btn btn-primary col-md-4 col-sm-4 col-xs-4" for="avancado_outlook">
+                            <input name="outlook" id="avancado_outlook" type="radio" value="avancado" ondblclick="limparRadios('outlook');" >
+                            Avançado</label>
+                        </div>
+                      </div>
+                      <i class="fa fa-laptop"></i></div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group form-icon-group">
+                      <input name="info" type="text" placeholder="Outros" class="form-control" id="info" size="50"/>
+                      <i class="fa fa-laptop"></i></div>
+                  </div>
+                </div>
+                <br><br>
+                <h2 class="inner-caps ">Experiências profissionais</h2>
+                <br>
+                <div class="form-group form-icon-group">
+                  <input name="emp1" type="text" placeholder="Última Empresa" class="form-control" id="emp1" size="45"/>
+                  <i class="fa fa-briefcase"></i></div>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group form-icon-group">
+                      <input name="cargo1" type="text" placeholder="Cargo Ocupado" class="form-control" id="cargo1" size="45"/>
+                      <i class="fa fa-briefcase"></i></div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group form-icon-group">
+                      <div class="row">
+                        <div class="btn-group col-md-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-12" for="empat">
+                            <input type="checkbox" name="empat" id="empat" value="(emprego atual)">
+                            Emprego Atual</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group form-icon-group"><i class="fa fa-calendar"></i>
+                      <input class="form-control" placeholder="Período" readonly>
+                    </div>
+                  </div>
+                  <div class="col-md-1"> de </div>
+                  <div class="col-md-3">
+                    <input type="date" id="pa1" name="pa1" class="form-control" maxlength="10" size="10" onkeypress="return SomenteNumero(event)"/>
+                  </div>
+                  <div class="col-md-1">a </div>
+                  <div class="col-md-3">
+                    <input type="date" id="pa12" name="pa12" class="form-control" maxlength="10" size="10" onkeypress="return SomenteNumero(event)"/>
+                  </div>
+                </div>
+                <br>
+                <div class="form-group form-icon-group">
+                  <input name="emp2" type="text" placeholder="Penultima Empresa" class="form-control" id="emp2" size="45"/>
+                  <i class="fa fa-briefcase"></i></div>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group form-icon-group">
+                      <input name="cargo2" type="text" placeholder="Cargo Ocupado" class="form-control" id="cargo2" size="45"/>
+                      <i class="fa fa-briefcase"></i></div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group form-icon-group">
+                      <div class="row">
+                        <div class="btn-group col-md-12" data-toggle="buttons">
+                          <label class="btn btn-primary col-md-12" for="empat2">
+                            <input type="checkbox" name="empat2" id="empat2" value="(emprego atual)">
+                            Emprego Atual</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group form-icon-group">
+                      <input class="form-control" placeholder="Período" readonly>
+                      <i class="fa fa-calendar"></i></div>
+                  </div>
+                  <div class="col-md-1"> de</div>
+                  <div class="col-md-3">
+                    <input type="date" id="pa2" name="pa2" class="form-control" maxlength="10" size="10" onkeypress="return SomenteNumero(event)"/>
+                  </div>
+                  <div class="col-md-1"> a </div>
+                  <div class="col-md-3">
+                    <input type="date" id="pa22" name="pa22" class="form-control" maxlength="10" size="10" onkeypress="return SomenteNumero(event)"/>
+                  </div>
+                </div>
+                <br><br>
+                <h2 class="inner-caps ">Informações complementares</h2>
+                <br>
+                <div class="form-group form-icon-group">
+                  <textarea id="mensagem" name="mensagem" rows="5" cols="55" class="form-control" placeholder="Mensagem"></textarea>
+                  <i class="fa fa-edit"></i></div>
+              </div>
+              <div style="clear:both"><br><br></div>
+              <div class="col-md-6 text-left small-screen-center os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.3s"> <br>
+                <h2 class="inner-caps ">Anexar Curriculo (opcional)</h2>
+                <br>
+                <div class="form-group form-icon-group">
+                  <div class="row">
+                    <div class="btn-group col-md-12" data-toggle="buttons">
+                      <label class="btn btn-primary col-md-3" id="lblanexcurric" for="anexcurric">
+                        <input type="checkbox" name="anexcurric" id="anexcurric" onload="check(0)">
+                        Anexar</label>
+                    </div>
+                  </div>
+                </div>
+                <div id="axfl" style="display:none" class="form-group form-icon-group">
+                  <input class="btn btn-primary" name="curriculo" id="curriculo" type="file"/>
+                  <input type="hidden" name="anexcurric2" id="anexcurric2"/>
+                </div>
+              </div>
+              <div class="col-md-6 text-left small-screen-center os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.3s"><br>
+                <h2 class="inner-caps ">Como chegou até aqui?</h2>
+                <br>
+                <div class="form-group form-icon-group"><i class="fa fa-bullhorn"></i>
+                  <input class="form-control" placeholder="Como você se informou sobre o 'Trabalhe Conosco' e das vagas em aberto?" readonly>
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary col-md-4 col-sm-6 col-xs-6" for="Facebook">
+                          <input class="ckbinforme" type="checkbox" name="Facebook" value="Facebook" id="Facebook">
+                          Facebook</label>
+                        <label class="btn btn-primary col-md-4 col-sm-6 col-xs-6" for="Google">
+                          <input class="ckbinforme" type="checkbox" name="Google" value="Google" id="Google"/>
+                          Pesquisa Online</label>
+                        <label class="btn btn-primary col-md-4 col-sm-6 col-xs-6" for="Cartazes">
+                          <input class="ckbinforme" type="checkbox" name="Cartazes" value="Cartazes" id="Cartazes">
+                          Cartazes</label>
+                        <label class="btn btn-primary col-md-4 col-sm-6 col-xs-6" for="TV">
+                          <input class="ckbinforme" type="checkbox" name="TV" value="TV" id="TV"/>
+                          Comercial de TV</label>
+                        <label class="btn btn-primary col-md-4 col-sm-6 col-xs-6" for="Jornal">
+                          <input class="ckbinforme" type="checkbox" name="Jornal" value="Jornal" id="Jornal" >
+                          Jornal</label>
+                        <label class="btn btn-primary col-md-4 col-sm-6 col-xs-6" for="Revista">
+                          <input class="ckbinforme" type="checkbox" name="Revista" value="Revista" id="Revista"/>
+                          Revista</label>
+                        <label class="btn btn-primary col-md-4 col-sm-6 col-xs-6" for="Indicacao">
+                          <input class="ckbinforme" type="checkbox" name="Indicacao" value="Indicação" id="Indicacao" >
+                          Indicação</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="col-md-12 text-center small-screen-center os-animation element-normal-bottom" style="text-align:center;"><br>
+                <br>
+                <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Enviar" style="width:30%"/>
+                <input type="reset" class="btn btn-primary" name="reset" id="reset" value="Apagar" style="width:30%"/>
+              </div>
+              <div id="messages" style="text-align:center"></div>
+            </form>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</div>
+<section id="services" class="section swatch-black" style="min-height:50px">
+  <div class="background-overlay grid-overlay-0 " style="background-color: rgba(60,60,60,1);"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <header class="text-center element-small-top element-small-bottom condensed">
+          <div class="row">
+            <div class="col-md-12 ">
+              <div class="col-md-6 col-sm-6 col-xs-12"> <img src="assets/images/SPSP-logo-bott.png" alt="SPSP - Grupo Empresarial de Serviços" style="height: 70px !important"> </div>
+              <div class="col-md-6 col-sm-6 col-xs-12" style="text-align:center; line-height:1 !important"> <br>
+                SPSP - Sistema de Prestação de Serviços Padronizados<br>
+                Todos os direitos reservados - Marília/SP - 2016 </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</section>
+<style type="text/css">
+.modal-restrito{z-index:30000;top:100px;}
+</style>
+<div class="modal fade modal-restrito" id="myModal" tabindex="30000" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Mural de Vagas</h4>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-2 col-sm-2 col-xs-12 text-center"> <img src="assets/images/tb11.png" width="100px" align="center"/> </div>
+        <div class="col-md-10 col-sm-10 col-xs-12"> Todas as vagas estão sendo oferecidas preferencialmente para portadores de necessidades especiais e profissionais reabilitados pelo INSS<br/>
+          <br/>
+        </div>
+        Confira abaixo as vagas disponíveis para cada região da SPSP:<br/>
+        <?php
+$conexao = mysql_connect("mysql01.spsp1.hospedagemdesites.ws", "spsp1", "S7s7master*10*")
+or die ("Erro na conexão ao banco de dados.");
+$db = mysql_select_db("spsp1")
+or die ("Erro ao selecionar a base de dados.");
+$result=mysql_query("SELECT * FROM vagas WHERE regiao='Araraquara'"); echo mysql_num_rows($result) > 0 ? "<font color='red'><b>Araraquara</b></font><br>" : '';
+while($row=mysql_fetch_array($result)) echo $row['funcao']." - ".$row['observacao']."<br>";
+$result=mysql_query("SELECT * FROM vagas WHERE regiao='Bauru'"); echo mysql_num_rows($result) > 0 ? "<br><font color='red'><b>Bauru</b></font><br>" : '';
+while($row=mysql_fetch_array($result)) echo $row['funcao']." - ".$row['observacao']."<br>";
+$result=mysql_query("SELECT * FROM vagas WHERE regiao='Jundiai'"); echo mysql_num_rows($result) > 0 ? "<br><font color='red'><b>Jundiaí</b></font><br>" : '';
+while($row=mysql_fetch_array($result)) echo $row['funcao']." - ".$row['observacao']."<br>";
+$result=mysql_query("SELECT * FROM vagas WHERE regiao='Limeira'"); echo mysql_num_rows($result) > 0 ? "<br><font color='red'><b>Limeira</b></font><br>" : '';
+while($row=mysql_fetch_array($result)) echo $row['funcao']." - ".$row['observacao']."<br>";
+$result=mysql_query("SELECT * FROM vagas WHERE regiao='Marilia'"); echo mysql_num_rows($result) > 0 ? "<br><font color='red'><b>Marília</b></font><br>" : '';
+while($row=mysql_fetch_array($result)) echo $row['funcao']." - ".$row['observacao']."<br>";
+$result=mysql_query("SELECT * FROM vagas WHERE regiao='Pompeia'"); echo mysql_num_rows($result) > 0 ? "<br><font color='red'><b>Pompéia</b></font><br>" : '';
+while($row=mysql_fetch_array($result)) echo $row['funcao']." - ".$row['observacao']."<br>";
+$result=mysql_query("SELECT * FROM vagas WHERE regiao='S J Rio Pardo'"); echo mysql_num_rows($result) > 0 ? "<br><font color='red'><b>S J Rio Pardo</b></font><br>" : '';
+while($row=mysql_fetch_array($result)) echo $row['funcao']." - ".$row['observacao']."<br>";
+$result=mysql_query("SELECT * FROM vagas WHERE regiao='S J Rio Preto'"); echo mysql_num_rows($result) > 0 ? "<br><font color='red'><b>S J Rio Preto</b></font><br>" : '';
+while($row=mysql_fetch_array($result)) echo $row['funcao']." - ".$row['observacao']."<br>";
+?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/packages.min.js"></script>
+<script src="assets/js/theme.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
+
+<script type="text/javascript">
+
+function val6() {
+    Valor = document.getElementById('instrucao').value;
+    if (Valor == "Fundamental Incompleto, estudou até o ano " | Valor == "Medio Incompleto, estudou até o ano " | Valor == "Superior Incompleto, estudou até o ano ") {
+        document.getElementById('dserie1').style.display = 'block';
+        document.getElementById('concl1').style.display = 'none';
+        document.getElementById('dconcl1').value = "";
+    } else if (Valor == "Analfabeto" | Valor == "") {
+        document.getElementById('dserie1').style.display = 'none';
+        document.getElementById('concl1').style.display = 'none';
+        document.getElementById('serie1').value = "";
+        document.getElementById('dconcl1').value = "";
+    } else {
+        document.getElementById('serie1').value = "";
+        document.getElementById('dserie1').style.display = "none";
+        document.getElementById('concl1').style.display = 'block';
+    }
+}
+
+function valf() {
+    Valor = document.getElementById('instrucao').value;
+    if (Valor == "Superior Incompleto, estudou até o ano " | Valor == "Superior Completo - concluiu em: ") {
+        document.getElementById('facu').style.display = 'block';
+    } else {
+        document.getElementById('facu').style.display = 'none';
+        document.getElementById('ncurso1').value = "";
+        document.getElementById('nest1').value = "";
+    }
+}
+
+function val7() {
+    Valor = document.getElementById('ensipos').value;
+    if (Valor == "Pos Graduacao Incompleta, estudou até o ano " | Valor == "Mestrado Incompleto, estudou até o ano " | Valor == "Doutorado Incompleto, estudou até o ano ") {
+        document.getElementById('dserie2').style.display = 'block';
+        document.getElementById('concl2').style.display = 'none';
+        document.getElementById('dconcl2').value = "";
+    } else if (Valor == "Nao Possui" | Valor == "") {
+        document.getElementById('dserie2').style.display = 'none';
+        document.getElementById('concl2').style.display = 'none';
+        document.getElementById('serie2').value = "";
+        document.getElementById('dconcl2').value = "";
+    } else {
+        document.getElementById('serie2').value = "";
+        document.getElementById('dserie2').style.display = "none";
+        document.getElementById('concl2').style.display = 'block';
+    }
+}
+
+function valp() {
+    Valor = document.getElementById('ensipos').value;
+    if (Valor == "Nao Possui" | Valor == "") {
+        document.getElementById('pos').style.display = 'none';
+        document.getElementById('ncurso2').value = "";
+        document.getElementById('nest2').value = "";
+    } else {
+        document.getElementById('pos').style.display = 'block';
+    }
+}
+
+function limpa() {
+    if (document.getElementById('dvencto').value != "") {
+        document.getElementById('dvencto').value = "";
+    }
+}
+
+function mostracurric() {
+    document.getElementById('pop').style.display = "block";
+};
+
+$(function() {
+    $(document).find('#form1 #submit').on('click', function(e) {
+        if ($('#deficis').is(':checked')) {
+            if ($('#tdeficiencia').val() == null) {
+                alert('Informe o TIPO DA DEFICIÊNCIA.');
+                return false;
+            }
+        }
+        if ($('.ckbhora:checked').length == 0) {
+            alert('Selecione pelo menos um período de DISPONIBILIDADE DE HORÁRIO.');
+            return false;
+        }
+        if ($('.ckbarea:checked').length == 0) {
+            alert('Selecione pelo menos uma ÁREA DE INTERESSE.');
+            return false;
+        }
+        if ($('#area4').is(':checked')) {
+            if (!$('#vpatricurso, #vpatricurso2').is(':checked')) {
+                alert('Informe se você POSSUI O CURSO DE VIGILANTE.');
+                return false;
+            }
+        }
+        if ($('#vpatricurso').is(':checked')) {
+            if ($('#dvencto').val() == ('')) {
+                alert('Informe a DATA DE VALIDADE DA CNV.');
+                return false;
+            }
+        }
+
+        if ($('.ckbinforme:checked').length == 0) {
+            alert('Selecione pelo menos uma opção de COMO VOCÊ CONHECEU A SPSP.');
+            return false;
+        }
+
+        $('#form1').submit();
+
+        return true;
+    });
+})
+
+$(function() {
+    $('#reset').on('click', function() {
+        $('label').removeClass('active');
+        $('#dvencto, #anexfile, #anexcurric2, #tdeficiencia').val('');
+        $('#datav, #vpatriinfo, #axfl, #deficienciadiv').hide();
+        
+        selectTags = form1.getElementsByTagName("select");
+		for(var i = 0; i < selectTags.length; i++) {
+  		selectTags[i].selectedIndex =0;
+		}  
+
+    });
+
+    $('#lblvpatricurso2').on('click', function() {
+        $('#vpatricurso2').prop('checked', false);
+        $('#dvencto').val('');
+        $('#datav').hide();
+    });
+
+    $('#lblvpatricurso').on('click', function() {
+        $('#vpatricurso').prop('checked', true);
+        $('#datav').show();
+    });
+
+    $('#lblarea4').on('click', function() {
+        $('#area4').prop('checked', !$('#area4').is(':checked'));
+        if ($('#area4').is(':checked')) {
+            $('#vpatriinfo').show();
+        } else {
+            $('#lblvpatricurso, #lblvpatricurso2').removeClass('active');
+            $('#vpatricurso, #vpatricurso2').prop('checked', false);
+            $('#dvencto').val('');
+            $('#datav, #vpatriinfo').hide();
+        }
+    });
+
+    $('#lblanexcurric').on('click', function() {
+        $('#anexcurric').prop('checked', !$('#anexcurric').is(':checked'));
+        if ($('#anexcurric').is(':checked')) {
+            alert("Mesmo que você anexe seu currículo pronto, é importante que você preencha todas as informações no nosso formulário próprio, agilizando assim uma possível entrevista!");
+            $('#axfl').show();
+            $('#anexcurric2').val('anexo');
+        } else {
+            $('#anexfile, #anexcurric2').val('');
+            $('#axfl').hide();
+        }
+    });
+
+    $('#lbldeficis').on('click', function() {
+        $(this).trigger('dblclick');
+    }).on('dblclick', function() {
+        $('#deficis').prop('checked', true);
+        $('#deficienciadiv').show();
+        $('#tdeficiencia').attr('required', 'required');
+    });
+
+    $('#lbldeficin').on('click', function() {
+        $(this).trigger('dblclick');
+    }).on('dblclick', function() {
+        $('#deficin').prop('checked', true);
+        $('#tdeficiencia').val('').removeAttr('required');
+        $('#deficienciadiv').hide();
+    });
+
+});
+
+function SomenteNumero(evt) {
+    var tecla = (window.event) ? event.keyCode : e.which;
+    if ((tecla > 47 && tecla < 58)) return true;
+    else {
+        if (tecla == 8 || tecla == 0) return true;
+        else return false;
+    }
+};
+
+
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-85630992-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+</body>
+</html>
